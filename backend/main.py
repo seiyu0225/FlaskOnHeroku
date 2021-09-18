@@ -2,8 +2,8 @@ from flask import Flask, render_template
 from api import text_count_bp
 
 
-# app = Flask(__name__, static_folder='../dist/static', template_folder='../dist')
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./templates/static', template_folder='./templates')
+# app = Flask(__name__)
 app.register_blueprint(text_count_bp)
 
 @app.route('/', defaults={'path': ''})
