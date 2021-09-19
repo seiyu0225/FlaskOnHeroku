@@ -60,7 +60,8 @@ export default {
         .post('/api/user_name/post', myname) 
         .then(response => {
           console.log("ok");
-          console.log(response.data)
+          console.log(response.data);
+          console.log(this.PostedTextList);
           this.PostedTextList.push(response.data)
         })
         .catch(err => {

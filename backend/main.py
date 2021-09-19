@@ -6,9 +6,8 @@ app = Flask(__name__, static_folder='./templates/static', template_folder='./tem
 # app = Flask(__name__)
 app.register_blueprint(text_count_bp)
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def index(path):
+@app.route('/')
+def index():
     return render_template('index.html')
 
 @app.route('/api/user_name/post', methods=['POST']) 
