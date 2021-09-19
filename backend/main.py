@@ -9,7 +9,8 @@ config = {
   "storageBucket" : "flaskonheroku.appspot.com",
   "messagingSenderId" : "644162721537",
   "appId" : "1:644162721537:web:ed2cfbd05bb5919e706d00",
-  "measurementId" : "G-80ZC9Y9D9H"
+  "measurementId" : "G-80ZC9Y9D9H",
+  "databaseURL" : "https://post_text.firebaseio.com"
 }
 
 app = Flask(__name__, static_folder='./templates/static', template_folder='./templates')
