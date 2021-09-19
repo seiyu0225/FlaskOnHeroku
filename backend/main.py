@@ -18,7 +18,8 @@ def name_post():
     for _ in range(5):
         ret.append(
             {
-                "text" : "aaa"
+                "text" : "aaa",
+                "index" : _
             }
         )
     return jsonify(ret)

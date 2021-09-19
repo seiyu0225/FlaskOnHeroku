@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-container>
+    <v-container class="grey lighten-5 mb-6">
       <v-text-field
         v-model="name"
         label="ペンネーム"
@@ -16,7 +16,7 @@
         max-width="400"
         tile
       >
-      <div v-for="PostedText in PostedTextList" v-bind:key="PostedText.created_at">
+      <div v-for="PostedText in PostedTextList" v-bind:key="PostedText.index">
         <v-list-item>
           <v-list-item-content>
             <v-list-item-title>PostedText.text</v-list-item-title>
@@ -65,7 +65,6 @@ export default {
         })
         .catch(err => {
           alert('APIサーバと接続できません')
-          err = null
         })
     }
   }
