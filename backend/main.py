@@ -1,5 +1,4 @@
 from flask import *
-from api import text_count_bp
 import pyrebase
 
 app = Flask(__name__, static_folder='./templates/static', template_folder='./templates')
