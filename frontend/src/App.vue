@@ -61,7 +61,7 @@ export default {
         .then(response => {
           console.log("ok");
           console.log(response.data)
-          this.PostedText.push(response.data)
+          this.PostedTextList.push(response.data)
         })
         .catch(err => {
           alert('APIサーバと接続できません')
