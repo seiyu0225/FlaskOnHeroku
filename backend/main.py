@@ -10,11 +10,11 @@ def index():
 # basic関数を定義
 def name_post():
     ret = []
-    for _ in range(5):
+    for index in range(5):
         ret.append(
             {
                 "text" : "aaa",
-                "index" : _
+                "index" : index
             }
         )
     return jsonify(ret)

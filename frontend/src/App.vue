@@ -62,7 +62,7 @@ export default {
           console.log("ok");
           console.log(response.data);
           console.log(this.PostedTextList);
-          this.PostedTextList.push(response.data)
+          this.PostedTextList = response.data;
         })
         .catch(err => {
           alert('APIサーバと接続できません')
