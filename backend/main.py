@@ -28,14 +28,13 @@ def name_post():
     firebase = pyrebase.initialize_app(config)
     db = firebase.database()
     # formから値を取得
-    name = request.form['name']
+    name = request.json['name']
     post_text = db.child("post_text").order_by_child("name").equal_to(name).get()
     
     ret_object = []
     for dic in post_text.each():
         ret_object.append(
             {
-                "created_at" : dic.val()["created_at"],
                 "text" : dic.val()["text"]
             }
         )
