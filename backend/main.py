@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import *
 from api import text_count_bp
 
 
