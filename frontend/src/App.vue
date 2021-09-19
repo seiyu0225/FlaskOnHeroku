@@ -1,37 +1,39 @@
 <template>
   <v-app>
-    <v-text-field
-      v-model="name"
-      label="ペンネーム"
-      outlined
-    ></v-text-field>
-    <v-btn
-      elevation="2"
-      @click="InputName"
-      color="primary"
-    >送信</v-btn>
-   <v-card
-      class="mx-auto"
-      max-width="400"
-      tile
-    >
-    <div v-for="PostedText in PostedTextList" v-bind:key="PostedText.created_at">
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title>PostedText.text</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-    </div>
-    <v-textarea
-      v-model="NewText"
-      color="teal"
-    >
-    <template v-slot:label>
-      <div>
-        新しいメモ
+    <v-container>
+      <v-text-field
+        v-model="name"
+        label="ペンネーム"
+        outlined
+      ></v-text-field>
+      <v-btn
+        elevation="2"
+        @click="InputName"
+        color="primary"
+      >送信</v-btn>
+      <v-card
+        class="mx-auto"
+        max-width="400"
+        tile
+      >
+      <div v-for="PostedText in PostedTextList" v-bind:key="PostedText.created_at">
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>PostedText.text</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </div>
-    </template>
-    </v-textarea>
+    <v-textarea
+        v-model="NewText"
+        color="teal"
+      >
+        <template v-slot:label>
+          <div>
+            新しいメモ
+          </div>
+        </template>
+      </v-textarea>
+    </v-container>
   </v-app>
 </template>
 
