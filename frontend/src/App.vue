@@ -7,8 +7,9 @@
     ></v-text-field>
     <v-btn
       elevation="2"
-      @click="SendData"
-    ></v-btn>
+      @click="InputName"
+      color="primary"
+    >送信</v-btn>
    <v-card
       class="mx-auto"
       max-width="400"
@@ -51,11 +52,13 @@ export default {
 
   methods: {
     InputName: function () {
-      var myname = { text: this.name }
+      var myname = { name: this.name }
 
       axios
         .post('/api/user_name/post', myname)
         .then(response => {
+          console.log("ok");
+          console.log(response.data)
           this.PostedText.push(response.data)
         })
         .catch(err => {
