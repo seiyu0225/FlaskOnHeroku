@@ -57,7 +57,7 @@ export default {
       var myname = { name: this.name }
 
       axios
-        .post('/api/user_name/post', myname)
+        .post('/api/user_name/post', myname) 
         .then(response => {
           console.log("ok");
           console.log(response.data)
@@ -65,6 +65,7 @@ export default {
         })
         .catch(err => {
           alert('APIサーバと接続できません')
+          console.log("err :", err);
         })
     }
   }
