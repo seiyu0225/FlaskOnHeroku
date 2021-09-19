@@ -1,9 +1,6 @@
 from flask import *
-import pyrebase
 
 app = Flask(__name__, static_folder='./templates/static', template_folder='./templates')
-# app = Flask(__name__)
-app.register_blueprint(text_count_bp)
 
 @app.route('/')
 def index():
