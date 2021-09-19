@@ -19,7 +19,7 @@
       <div v-for="PostedText in PostedTextList" v-bind:key="PostedText.index">
         <v-list-item>
           <v-list-item-content>
-            <v-list-item-title>PostedText.text</v-list-item-title>
+            <v-list-item-title>{{PostedText.text}}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </div>
