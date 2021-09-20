@@ -40,7 +40,6 @@
         <v-col cols="10">
             <v-card
               class="mx-auto"
-              max-width="800"
             >
               <v-card-title>Posted Notes</v-card-title>
               <v-card-sub-title class="grey--text">Show notes that have already been posted</v-card-sub-title>
