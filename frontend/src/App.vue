@@ -2,7 +2,7 @@
   <v-app>
     <v-container class=" lighten-5 mb-6">
       <v-row no-gutters justify="center">
-        <v-col cols="8">
+        <v-col cols="10">
             <form>
               <v-text-field
                 v-model="name"
@@ -10,7 +10,6 @@
                 required
               ></v-text-field>
               <v-btn
-                elevation="2"
                 @click="InputName"
                 color="primary"
               >Get posted notes</v-btn>
@@ -18,7 +17,7 @@
         </v-col>
       </v-row>
         <v-row no-gutters justify="center">
-          <v-col cols="8">
+          <v-col cols="10">
             <form>
               <v-text-field
                 v-model="NewText"
@@ -38,10 +37,10 @@
           </v-col>
       </v-row>
       <v-row no-gutters justify="center">
-        <v-col cols="8" justify="center">
+        <v-col cols="10">
             <v-card
               class="mx-auto"
-              max-width="400"
+              max-width="800"
             >
               <v-card-title>Posted Notes</v-card-title>
               <v-card-sub-title class="grey--text">Show notes that have already been posted</v-card-sub-title>
