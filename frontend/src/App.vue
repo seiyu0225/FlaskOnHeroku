@@ -1,46 +1,58 @@
 <template>
   <v-app>
     <v-container class=" lighten-5 mb-6">
-        <form>
-          <v-text-field
-            v-model="name"
-            label="Name"
-            required
-          ></v-text-field>
-          <v-btn
-            elevation="2"
-            @click="InputName"
-            color="primary"
-          >Get posted notes</v-btn>
-        </form>
-        <form>
-          <v-text-field
-            v-model="NewText"
-            :error-messages="ValidationErrors"
-            :counter="200"
-            label="New Notes"
-            required
-          ></v-text-field>
-          <v-btn
-            class="mr-4"
-            @click="Submit"
-            color="primary"
-          >
-            post
-          </v-btn>
-        </form>
-        <v-card
-          class="mx-auto"
-          max-width="400"
-        >
-          <v-card-title>Posted Notes</v-card-title>
-          <v-card-sub-title class="grey--text">Show notes that have already been posted</v-card-sub-title>
-          <v-card-text>
-            <div v-for="PostedText in PostedNotesList" v-bind:key="PostedText.index">
-              <div class="body-1 mb-1">{{PostedText.text}}</div>
-            </div>
-          </v-card-text>
-        </v-card>
+      <v-row no-gutters justify="center">
+        <v-col cols="8">
+            <form>
+              <v-text-field
+                v-model="name"
+                label="Name"
+                required
+              ></v-text-field>
+              <v-btn
+                elevation="2"
+                @click="InputName"
+                color="primary"
+              >Get posted notes</v-btn>
+            </form>
+        </v-col>
+      </v-row>
+        <v-row no-gutters justify="center">
+          <v-col cols="8">
+            <form>
+              <v-text-field
+                v-model="NewText"
+                :error-messages="ValidationErrors"
+                :counter="200"
+                label="New Notes"
+                required
+              ></v-text-field>
+              <v-btn
+                class="mr-4"
+                @click="Submit"
+                color="primary"
+              >
+                post
+              </v-btn>
+            </form>
+          </v-col>
+      </v-row>
+      <v-row no-gutters justify="center">
+        <v-col cols="8" justify="center">
+            <v-card
+              class="mx-auto"
+              max-width="400"
+            >
+              <v-card-title>Posted Notes</v-card-title>
+              <v-card-sub-title class="grey--text">Show notes that have already been posted</v-card-sub-title>
+              <v-card-text>
+                <div v-for="PostedText in PostedNotesList" v-bind:key="PostedText.index">
+                  <div class="body-1 mb-1">{{PostedText.text}}</div>
+                </div>
+              </v-card-text>
+            </v-card>
+        </v-col>
+      </v-row>
     </v-container>
   </v-app>
 </template>
