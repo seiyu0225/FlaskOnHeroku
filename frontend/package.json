@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "FlaskOnHeroku",
   "version": "0.1.0",
   "private": true,
   "scripts": {
