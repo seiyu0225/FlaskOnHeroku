@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container class=" lighten-5 mb-6">
-      <v-row no-gutters justify="center">
+      <v-row justify="center">
         <v-col cols="10">
             <form>
               <v-text-field
@@ -12,37 +12,36 @@
               <v-btn
                 @click="InputName"
                 color="primary"
-              >Get posted notes</v-btn>
+              >post name</v-btn>
             </form>
         </v-col>
       </v-row>
-        <v-row no-gutters justify="center">
-          <v-col cols="10">
-            <form>
-              <v-text-field
-                v-model="NewText"
-                :error-messages="ValidationErrors"
-                :counter="200"
-                label="New Notes"
-                required
-              ></v-text-field>
-              <v-btn
-                class="mr-4"
-                @click="Submit"
-                color="primary"
-              >
-                post
-              </v-btn>
-            </form>
-          </v-col>
+      <v-row justify="center">
+        <v-col cols="10" >
+          <form>
+            <v-text-field
+              v-model="NewText"
+              :error-messages="ValidationErrors"
+              :counter="200"
+              label="New Notes"
+              required
+            ></v-text-field>
+            <v-btn
+              class="mr-4"
+              @click="Submit"
+              color="primary"
+            >
+              post note
+            </v-btn>
+          </form>
+        </v-col>
       </v-row>
-      <v-row no-gutters justify="center">
+      <v-row justify="center">
         <v-col cols="10">
             <v-card
               class="mx-auto"
             >
-              <v-card-title>Posted Notes</v-card-title>
-              <v-card-sub-title class="grey--text">Show notes that have already been posted</v-card-sub-title>
+              <v-card-title>Posted Notes Of {{name}}</v-card-title>
               <v-card-text>
                 <div v-for="PostedText in PostedNotesList" v-bind:key="PostedText.index">
                   <div class="body-1 mb-1">{{PostedText.text}}</div>
@@ -83,12 +82,6 @@ export default {
           this.PostedTextList = response.data;
         })
         .catch(err => {
-          this.PostedNotesList.push(
-            {
-              index : 1,
-              text : this.NewText
-            }
-          )
           console.log("err :", err);
         })
     },
