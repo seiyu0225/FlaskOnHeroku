@@ -5,7 +5,7 @@
         <v-col cols="10">
             <form>
               <v-text-field
-                v-model="name"
+                v-model="Name"
                 label="Name"
                 required
               ></v-text-field>
@@ -41,7 +41,7 @@
             <v-card
               class="mx-auto"
             >
-              <v-card-title>Posted Notes Of {{name}}</v-card-title>
+              <v-card-title>Posted Notes Of {{Name}}</v-card-title>
               <v-card-text>
                 <div v-for="PostedText in PostedNotesList" v-bind:key="PostedText.index">
                   <div class="body-1 mb-1">{{PostedText.text}}</div>
