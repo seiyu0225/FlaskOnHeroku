@@ -3,17 +3,11 @@
     <v-container class=" lighten-5 mb-6">
       <v-row justify="center">
         <v-col cols="10">
-            <form>
-              <v-text-field
-                v-model="Name"
-                label="Name"
-                required
-              ></v-text-field>
-              <v-btn
-                @click="InputName"
-                color="primary"
-              >post name</v-btn>
-            </form>
+            <v-text-field
+              v-model="Name"
+              label="Name"
+              required
+            ></v-text-field>
         </v-col>
       </v-row>
       <v-row justify="center">
@@ -84,6 +78,7 @@ export default {
         .catch(err => {
           console.log("err :", err);
         })
+        
     },
     Submit: function () {
       this.PostedNotesList.push(
